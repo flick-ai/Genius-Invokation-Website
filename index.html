@@ -105,6 +105,16 @@
           change_character.classList.toggle("selected")
           current_choice = update_set(current_choice_set, "14")
           current_choice_text.innerText = current_choice
+
+          // 不需要确认
+          document.getElementById("input_result").innerText = current_choice
+          current_choice_text.innerText = ""
+          current_choice_set.clear()
+          current_choice = ""
+          clicker = document.getElementsByClassName("clickable")
+          for (let i = 0; i < clicker.length; i++) {
+            clicker[i].classList.remove("selected")
+          }
         }
       )
       let passround = document.getElementsByClassName("passround")[0]
@@ -113,6 +123,16 @@
           passround.classList.toggle("selected")
           current_choice = update_set(current_choice_set, "15")
           current_choice_text.innerText = current_choice
+
+          // 不需要确认
+          document.getElementById("input_result").innerText = current_choice
+          current_choice_text.innerText = ""
+          current_choice_set.clear()
+          current_choice = ""
+          clicker = document.getElementsByClassName("clickable")
+          for (let i = 0; i < clicker.length; i++) {
+            clicker[i].classList.remove("selected")
+          }
         }
       )
 
@@ -160,6 +180,23 @@
           newDiv.textContent = "";
           dice_inner.appendChild(newDiv);
         }
+
+        let confirm_btn = document.createElement("div")
+        confirm_btn.classList.add("item", "clickable")
+        confirm_btn.addEventListener(
+            "click", ()=>{
+            document.getElementById("input_result").innerText = current_choice
+            current_choice_text.innerText = ""
+            current_choice_set.clear()
+            current_choice = ""
+            clicker = document.getElementsByClassName("clickable")
+            for (let i = 0; i < clicker.length; i++) {
+              clicker[i].classList.remove("selected")
+            }
+          }
+        )
+        confirm_btn.innerText = "确认"
+        dice_player.appendChild(confirm_btn)
 
         // 支援区
         for (let support_idx = 0; support_idx < 4; support_idx++) {
