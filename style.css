@@ -1,0 +1,324 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.diceinner {
+  margin: 10px 20px;
+  display: grid;
+  place-items: center;
+  grid-gap: 4px;
+  grid-template-columns: auto auto;
+}
+
+.handcardinner {
+  display: flex;
+  flex-direction: column;
+}
+
+.basebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* .test {
+  background-color: rgb(58, 90, 186);
+} */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 6px;
+    grid-auto-rows: minmax(80px, 80px);
+  }
+  .player0box {
+    grid-column: 1 / 10;
+    grid-row: 2/6;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  .player1box {
+    grid-column: 1 / 10;
+    grid-row: 6/10;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  .informationbox {
+    grid-column: 1 / 10;
+    grid-row: 1 / 2;
+    background: #BBBBBB;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .confirm {
+    grid-column: 1/ 2;
+    grid-row: 1/ 2;
+  }
+  .information {
+    grid-column: 3/ 8;
+    grid-row: 1/ 2;
+  }
+  .changecharacter {
+    grid-column: 8/ 9;
+    grid-row: 1/ 2;
+  }
+  .passround {
+    grid-column: 9/ 10;
+    grid-row: 1/ 2;
+  }
+  .cardzone.player0 { 
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background: #BBBBBB;
+  }
+  .handcard.player0 {
+    grid-row: 3/ 6;
+    grid-column: 1 / 2;
+    background: #BBBBBB;
+  }
+  .support0.player0 {
+    grid-column: 2;
+    grid-row: 2/4;
+    background: rgb(187, 187, 187);
+  }
+  .support2.player0 {
+    grid-column: 2;
+    grid-row: 4/6;
+    background: #E6CEAC;
+  }
+  .support1.player0 {
+    grid-column: 3;
+    grid-row: 2/4;
+    background: #ECAD9E;
+  }
+  .support3.player0 {
+    grid-column: 3;
+    grid-row: 4/6;
+    background: #ECAD9E;
+  }
+  .character0.player0 {
+    grid-column: 4;
+    grid-row: 2/6;
+    background: #ECAD9E;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  .character1.player0 {
+    grid-column: 5;
+    grid-row: 2/6;
+    background: #ECAD9E;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  .character2.player0 {
+    grid-column: 6;
+    grid-row: 2/6;
+    background: #ECAD9E;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  
+  .summon0.player0 {
+    grid-column: 7;
+    grid-row: 2/4;
+    background: #BBBBBB;
+  }
+  .summon2.player0 {
+    grid-column: 7;
+    grid-row: 4/6;
+    background: #E6CEAC;
+  }
+  .summon1.player0 {
+    grid-column: 8;
+    grid-row: 2/4;
+    background: #ECAD9E;
+  }
+  .summon3.player0 {
+    grid-column: 8;
+    grid-row: 4/6;
+    background: #ECAD9E;
+  }
+  .dice.player0 {
+    grid-column: 9;
+    grid-row: 2/6;
+    background: #ECAD9E;
+  }
+  .cardzone.player1 { 
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    background: #BBBBBB;
+  }
+  .handcard.player1 {
+    grid-column: 1 / 2;
+    grid-row: 7/ 10;
+    background: #BBBBBB;
+  }
+  .support0.player1 {
+    grid-column: 2;
+    grid-row: 6/8;
+    background: #BBBBBB;
+  }
+  .support2.player1 {
+    grid-column: 2;
+    grid-row: 8/10;
+    background: #E6CEAC;
+  }
+  .support1.player1 {
+    grid-column: 3;
+    grid-row: 6/8;
+    background: #ECAD9E;
+  }
+  .support3.player1 {
+    grid-column: 3;
+    grid-row: 8/10;
+    background: #ECAD9E;
+  }
+  .character0.player1 {
+    grid-column: 4;
+    grid-row: 6/10;
+    background: #ECAD9E;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  .character1.player1 {
+    grid-column: 5;
+    grid-row: 6/10;
+    background: #ECAD9E;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  .character2.player1 {
+    grid-column: 6;
+    grid-row: 6/10;
+    background: #ECAD9E;
+    border-style:solid;
+    border-width: 4px;
+    border-color: #00000000;
+  }
+  
+  .summon0.player1 {
+    grid-column: 7;
+    grid-row: 6/8;
+    background: #BBBBBB;
+  }
+  .summon2.player1 {
+    grid-column: 7;
+    grid-row: 8/10;
+    background: #E6CEAC;
+  }
+  .summon1.player1 {
+    grid-column: 8;
+    grid-row: 6/8;
+    background: #ECAD9E;
+  }
+  .summon3.player1 {
+    grid-column: 8;
+    grid-row: 8/10;
+    background: #ECAD9E;
+  }
+  .dice.player1 {
+    grid-column: 9;
+    grid-row: 6/10;
+    background: #ECAD9E;
+  }
+  .item .title {
+    font-size: 120%;
+  }
+  
+  .item {
+    text-align: center;
+    font-size: 110%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .item .skill {
+    text-align: center;
+    font-size: 90%;
+    color: #fff;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .diceitem {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-style:solid;
+    border-width:2px;
+    border-color: #00000000;
+  }
+
+  .zone {
+    margin: 4px;
+  }
+  
+  /* .contain {
+    border-style:solid;
+    border-width:1px;
+    border-color:#999999;
+  } */
+  
+  /* .clickable {
+    border-style:solid;
+    border-width:2px;
+    border-color: #00000000;
+  } */
+  
+  .clickable:hover {
+    background-color: #FFFFFF33;
+  }
+  
+  .selected {
+    background-color: #FFFFFF33;
+  }
+  
+  
+  .diceitem:hover {
+    border-color: #555555;
+  }
+  
+  .diceitem.selected {
+    border-color: #555555;
+  }
+
+  .expanditem {
+    font-size: 90%;
+  }
+  
+  .topclick {
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+  }
+  
+  .health {
+    background-color: #BB3333;
+  }
+  
+  .energy {
+    background-color: #D6CEAC;
+  }
+  
+  .element {
+    background-color: #BBBBBB;
+  }
