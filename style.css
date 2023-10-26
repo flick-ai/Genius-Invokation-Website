@@ -275,7 +275,11 @@
     flex-direction: column;
   }
 
-  .expanditem .expandinner {
+  .equip:hover .equipexpandinner{
+    display: block;
+  }
+
+  .expandinner {
     background-color: #44444488;
     width:120px;
     position: absolute;
@@ -394,6 +398,7 @@
     background-color: #BBBBBB;
   }
   .equip {
+    position: relative;
     background-color: #DDDDDD;
   }
 
@@ -414,7 +419,18 @@
     grid-column: 6/7;
   }
 
+  #loadselect {
+    grid-column: 5/6;
+  }
+
   .charaitem {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carditem {
     height: 100%;
     width: 100%;
     justify-content: center;
@@ -426,12 +442,46 @@
   }
 
   .selectcard {
-    grid-column: 1/4;
+    grid-column: 1/12;
     grid-row: 5/10;
     background: #444444aa;
     z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* overflow: scroll; */
+  }
+
+  .equipexpandinner{
+    background-color: #44444488;
+    width:120px;
+    position: absolute;
+    left: 0px;
+    top: 35px;
+    z-index: 1;
+    color: #fff;
+    border-radius: 10%;
+    display: none;
+    font-size: 90%;
+  }
+
+
+  .selectcardinner {
     display: flex;
     overflow: scroll;
+  }
+
+  .selectcardinnercontent {
+    display: flex;
+    overflow: scroll;
+    font-size: 85%;
+  }
+
+  .twice:hover {
+    background: #FFFF0044;
+  }
+
+  #hasselected {
+    grid-column: 2 / 5;
   }
 
   
