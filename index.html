@@ -2,22 +2,28 @@
   <head>
     <meta charset="utf-8" />
     <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
-    <link rel="stylesheet" href="./pyscript.css" />
+    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script defer src="./pyscript.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+    <script defer src="https://pyscript.net/releases/2022.06.1/pyscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <py-env>
+      - './genius_invocation-0.0.1-py3-none-any.whl'
+      - numpy
+      - './loguru-0.7.2-py3-none-any.whl'
+      - './rich-13.6.0-py3-none-any.whl'
+    </py-env>
   </head>
 
   <body>
-    <py-config>
+    <!-- <py-config>
       packages = [
         './genius_invocation-0.0.1-py3-none-any.whl',
         'numpy',
         './loguru-0.7.2-py3-none-any.whl',
         './rich-13.6.0-py3-none-any.whl']
-    </py-config>
+    </py-config> -->
     
     <div class="wrapper">
       <div class="informationbox">
@@ -74,7 +80,8 @@
       <div class="summon3 player1 item zone"><div class="thetitle clickable">召唤区4</div></div>
       <div class="dice player1 item zone"><div class="thetitle clickable">骰子区</div></div>
       <div class="currentselect item before"><div class="clickable item charaitem" id="startgame" style="display: none;">开始游戏</div><div class="clickable item charaitem" id="confirmchara">确定角色</div><div class="clickable item charaitem" id="confirmcard">确定手牌</div><div class="item" id="hasselected">已选择:</div><div class="item clickable charaitem" id="loadselect">读取卡组</div><div class="item clickable charaitem" id="saveselect" style="display: none;">保存卡组</div></div>
-      <div class="selectcharacter item before" id="selectcharacter"></div>
+      <div class="selectcharacterouter before"> <div class="selectcharacter item before" id="selectcharacter"></div></div>
+
       <div class="selectcard item before" id="selectcard"></div>
       
     </div>
